@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.udacity.shoestore.models.ShoeViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/nameText"
+            android:layout_width="165dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="72dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:text="@string/shoeName"
+            android:textColor="#3D8780"
+            android:textColorHint="#4C857F"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.04"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/nameEdit"
+            android:layout_width="392dp"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:hint="@string/shoeName"
+            android:inputType="text"
+            android:text="@={viewModel.name}"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameText"
+            tools:ignore="MissingConstraints" />
+
+<!--        company-->
+        <TextView
+            android:id="@+id/companyText"
+            android:layout_width="165dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="24dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:text="@string/companyName"
+            android:textColor="#3D8780"
+            android:textColorHint="#4C857F"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.04"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sizeEdit"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/companyEdit"
+            android:layout_width="392dp"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:hint="@string/companyName"
+            android:inputType="text"
+            android:text="@={viewModel.company}"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.473"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/companyText"
+            tools:ignore="MissingConstraints" />
+
+        <!--        shoe size-->
+        <TextView
+            android:id="@+id/sizeText"
+            android:layout_width="165dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="24dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:text="@string/shoeSize"
+            android:textColor="#3D8780"
+            android:textColorHint="#4C857F"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.04"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameEdit"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/sizeEdit"
+            android:layout_width="392dp"
+            android:layout_height="48dp"
+            android:ems="3"
+            android:hint="@string/shoeSize"
+            android:inputType="numberDecimal"
+            android:text="@={viewModel.size}"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.526"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sizeText"
+            tools:ignore="MissingConstraints" />
+
+        <!--        description-->
+        <TextView
+            android:id="@+id/dsText"
+            android:layout_width="165dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="24dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:text="@string/description"
+            android:textColor="#3D8780"
+            android:textColorHint="#4C857F"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.04"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/companyEdit"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/dsEdit"
+            android:layout_width="392dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="4dp"
+            android:ems="100"
+            android:hint="@string/description"
+            android:inputType="text"
+            android:text="@={viewModel.description}"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.526"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dsText"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/cancel_button"
+            android:layout_width="107dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="24dp"
+            android:text="@string/cancel_btn"
+            android:theme="@style/LoginButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dsEdit"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="107dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="112dp"
+            android:text="@string/save_btn"
+            android:theme="@style/LoginButton"
+            app:layout_constraintEnd_toStartOf="@+id/cancel_button"
+            app:layout_constraintHorizontal_bias="0.577"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dsEdit"
+            tools:ignore="MissingConstraints" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

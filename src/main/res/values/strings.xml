@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Shoe Store</string>
+    <string name="Login">Login</string>
+    <string name="Email">Email</string>
+    <string name="welcome">Welcome</string>
+    <string name="instruction">Instruction</string>
+    <string name="shoeName">Shoe Name</string>
+    <string name="companyName">Company</string>
+    <string name="shoeSize">Size</string>
+    <string name="description">Description</string>
+    <string name="cancel_btn">Cancel</string>
+    <string name="save_btn">Save</string>
+    <string name="logout">Logout</string>
+    <string name="password">Password</string>
+    <string name="add_btn">Add</string>
+    <string name="size">Shoe Size</string>
+    <string name="company">Shoe Company</string>
+    <string name="shoe_size">%.1f</string>
+
+</resources>
